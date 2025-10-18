@@ -1,6 +1,4 @@
-type Props = {};
-
-const Projects = (props: Props) => {
+const Projects = () => {
   return <div>Projects</div>;
 };
 export default Projects;

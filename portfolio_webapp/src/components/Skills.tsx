@@ -1,6 +1,4 @@
-type Props = {};
-
-const Skills = (props: Props) => {
+const Skills = () => {
   return <div>Skills</div>;
 };
 export default Skills;

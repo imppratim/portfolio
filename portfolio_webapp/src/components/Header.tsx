@@ -1,6 +1,4 @@
-type Props = {};
-
-const Header = (props: Props) => {
+const Header = () => {
   return (
     <div className="headerContainer">
       <header className="d-flex justify-content-center align-interms-center p-3">
