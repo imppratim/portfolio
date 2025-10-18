@@ -8,32 +8,25 @@ const Introduction = () => {
           <h1 className="display-4 fw-bold lh-1 text-body-emphasis">
             {personalData.name}
           </h1>
-          <p className="lead"> {personalData.title}</p>
+          <p className="lead">{personalData.title}</p>
+          <div className="text-start mb-4 mb-lg-3">{personalData.intro}</div>
           <div className="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
             <button
               type="button"
-              className="btn btn-primary btn-lg px-4 me-md-2 fw-bold"
+              className="btn btn-primary btn-lg w-100 w-md-auto px-2 px-md-4 me-md-2 fw-bold"
             >
-              Primary
-            </button>
-            <button
-              type="button"
-              className="btn btn-outline-secondary btn-lg px-4"
-            >
-              Default
+              Contact Me
             </button>
           </div>
         </div>
         <div className="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
           <img
-            className="rounded-lg-3"
+            className="rounded-lg-3 img-fluid"
             src={personalData.image}
             alt="Personal"
-            width="500"
           />
         </div>
       </div>
-      <div>{personalData.intro}</div>
     </div>
   );
 };
