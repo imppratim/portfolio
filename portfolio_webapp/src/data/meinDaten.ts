@@ -1,4 +1,5 @@
 import img from "../images/Partha.png";
+
 const myPeronalData = {
   name: "Partha Pratim Nandi",
   title: "Artificial Intelligence Engineer",
