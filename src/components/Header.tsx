@@ -1,3 +1,5 @@
+//Header section fo the webpage
+
 const Header = () => {
   return (
     <div className="headerContainer">
