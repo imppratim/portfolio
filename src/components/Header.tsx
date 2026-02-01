@@ -7,9 +7,9 @@ const Header = () => {
   return (
     <header
       className="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm"
-      style={{ 
+      style={{
         backgroundColor: "#0a0a0a",
-        borderBottom: "1px solid #222222"
+        borderBottom: "1px solid #222222",
       }}
     >
       <div className="container-fluid px-4 px-lg-5">

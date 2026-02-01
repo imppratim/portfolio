@@ -20,7 +20,7 @@ const Skills = () => {
 
         <div className="row g-4">
           {mySkills.map((skillGroup, index) => (
-            <div key={index} className="col-lg-6">
+            <div key={index} className="col">
               <div
                 className="card h-100 shadow-sm border-0 skills-card"
                 style={{

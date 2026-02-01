@@ -118,7 +118,11 @@ const Projects = () => {
                   </p>
 
                   <p
-                    style={{ color: "#888888", fontSize: "0.85rem", marginBottom: "1rem" }}
+                    style={{
+                      color: "#888888",
+                      fontSize: "0.85rem",
+                      marginBottom: "1rem",
+                    }}
                   >
                     <small>
                       📅 {project.year || "2024"} • 📂 {project.category}

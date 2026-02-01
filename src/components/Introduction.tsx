@@ -18,7 +18,12 @@ const Introduction = () => {
             <p className="lead fs-5 mb-4" style={{ color: "#b0b0b0" }}>
               {personalData.title}
             </p>
-            <p className="text-white-50 lh-lg mb-4" style={{ color: "#888888" }}>{personalData.intro}</p>
+            <p
+              className="text-white-50 lh-lg mb-4"
+              style={{ color: "#888888" }}
+            >
+              {personalData.intro}
+            </p>
             <div className="d-grid gap-3 d-sm-flex">
               <a
                 href="mailto:imppratim@gmail.com"
