@@ -32,17 +32,20 @@ const Introduction = () => {
               >
                 Get In Touch
               </a>
-              <button
-                type="button"
-                className="btn btn-lg fw-bold"
+              <a
+                href="/Partha-Pratim-Nandi-CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-lg fw-bold text-decoration-none"
                 style={{
                   color: "#ffffff",
                   border: "2px solid #ffffff",
                   backgroundColor: "transparent",
+                  display: "inline-block",
                 }}
               >
                 View CV
-              </button>
+              </a>
             </div>
           </div>
           <div className="col-lg-6 text-center">
