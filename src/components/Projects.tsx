@@ -29,17 +29,17 @@ const Projects = () => {
       id="projects"
       className="py-5"
       style={{
-        background: "linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)",
+        background: "linear-gradient(135deg, #000000 0%, #1a1a1a 100%)",
       }}
     >
       <div className="container-lg">
         <h2
           className="display-5 fw-bold text-center mb-2"
-          style={{ color: "#0d1b2a" }}
+          style={{ color: "#ffffff" }}
         >
           Featured Projects
         </h2>
-        <p className="text-center text-muted mb-4">
+        <p className="text-center mb-4" style={{ color: "#888888" }}>
           Showcasing my work across different domains
         </p>
 
@@ -50,8 +50,8 @@ const Projects = () => {
             onClick={() => setSelectedCategory(null)}
             style={{
               backgroundColor:
-                selectedCategory === null ? "#00d4ff" : "#e0e0e0",
-              color: selectedCategory === null ? "#0d1b2a" : "#666",
+                selectedCategory === null ? "#ffffff" : "#333333",
+              color: selectedCategory === null ? "#000000" : "#888888",
               border: "none",
             }}
           >
@@ -64,8 +64,8 @@ const Projects = () => {
               onClick={() => setSelectedCategory(cat)}
               style={{
                 backgroundColor:
-                  selectedCategory === cat ? "#00d4ff" : "#e0e0e0",
-                color: selectedCategory === cat ? "#0d1b2a" : "#666",
+                  selectedCategory === cat ? "#ffffff" : "#333333",
+                color: selectedCategory === cat ? "#000000" : "#888888",
                 border: "none",
               }}
             >
@@ -82,7 +82,8 @@ const Projects = () => {
                 className="card h-100 shadow-sm border-0 overflow-hidden project-card"
                 style={{
                   transition: "all 0.3s ease",
-                  borderTop: "4px solid #00d4ff",
+                  borderTop: "4px solid #ffffff",
+                  backgroundColor: "#1a1a1a",
                 }}
               >
                 <div className="card-body p-4">
@@ -93,7 +94,7 @@ const Projects = () => {
                       </span>
                       <h5
                         className="card-title fw-bold mb-0"
-                        style={{ color: "#0d1b2a" }}
+                        style={{ color: "#ffffff" }}
                       >
                         {project.title}
                       </h5>
@@ -110,15 +111,14 @@ const Projects = () => {
                   </div>
 
                   <p
-                    className="card-text text-muted small mb-3"
-                    style={{ lineHeight: "1.6" }}
+                    className="card-text small mb-3"
+                    style={{ lineHeight: "1.6", color: "#b0b0b0" }}
                   >
                     {project.description}
                   </p>
 
                   <p
-                    className="text-muted"
-                    style={{ fontSize: "0.85rem", marginBottom: "1rem" }}
+                    style={{ color: "#888888", fontSize: "0.85rem", marginBottom: "1rem" }}
                   >
                     <small>
                       📅 {project.year || "2024"} • 📂 {project.category}
@@ -173,7 +173,7 @@ const Projects = () => {
                           border: "none",
                         }}
                       >
-                        🚀 View Live
+                        View Live
                       </a>
                     )}
                   </div>

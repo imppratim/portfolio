@@ -6,26 +6,26 @@ const Introduction = () => {
       id="introduction"
       className="py-5"
       style={{
-        background: "linear-gradient(135deg, #0d1b2a 0%, #1a2a3a 100%)",
+        background: "linear-gradient(135deg, #000000 0%, #1a1a1a 100%)",
       }}
     >
       <div className="container-lg">
         <div className="row align-items-center gap-4 gap-lg-0">
           <div className="col-lg-6 text-white">
-            <h1 className="display-3 fw-bold mb-3" style={{ color: "#00d4ff" }}>
+            <h1 className="display-3 fw-bold mb-3" style={{ color: "#ffffff" }}>
               {personalData.name}
             </h1>
-            <p className="lead fs-5 mb-4" style={{ color: "#64b5f6" }}>
+            <p className="lead fs-5 mb-4" style={{ color: "#b0b0b0" }}>
               {personalData.title}
             </p>
-            <p className="text-white-50 lh-lg mb-4">{personalData.intro}</p>
+            <p className="text-white-50 lh-lg mb-4" style={{ color: "#888888" }}>{personalData.intro}</p>
             <div className="d-grid gap-3 d-sm-flex">
               <a
                 href="mailto:imppratim@gmail.com"
                 className="btn btn-lg fw-bold text-decoration-none"
                 style={{
-                  backgroundColor: "#00d4ff",
-                  color: "#0d1b2a",
+                  backgroundColor: "#ffffff",
+                  color: "#000000",
                   border: "none",
                   display: "inline-block",
                 }}
@@ -36,8 +36,8 @@ const Introduction = () => {
                 type="button"
                 className="btn btn-lg fw-bold"
                 style={{
-                  color: "#00d4ff",
-                  border: "2px solid #00d4ff",
+                  color: "#ffffff",
+                  border: "2px solid #ffffff",
                   backgroundColor: "transparent",
                 }}
               >
@@ -50,7 +50,7 @@ const Introduction = () => {
               src={personalData.image}
               alt={personalData.name}
               className="img-fluid rounded-circle shadow-lg"
-              style={{ maxWidth: "400px", border: "4px solid #00d4ff" }}
+              style={{ maxWidth: "400px", border: "4px solid #ffffff" }}
             />
           </div>
         </div>

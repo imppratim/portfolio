@@ -5,16 +5,16 @@ const Skills = () => {
     <section
       id="skills"
       className="py-5"
-      style={{ backgroundColor: "#f8f9fa" }}
+      style={{ backgroundColor: "#0a0a0a" }}
     >
       <div className="container-lg">
         <h2
           className="display-5 fw-bold text-center mb-2"
-          style={{ color: "#0d1b2a" }}
+          style={{ color: "#ffffff" }}
         >
           Technical Skills
         </h2>
-        <p className="text-center text-muted mb-5">
+        <p className="text-center mb-5" style={{ color: "#888888" }}>
           Expertise across AI/ML, Web Development, Backend, and DevOps
         </p>
 
@@ -24,8 +24,8 @@ const Skills = () => {
               <div
                 className="card h-100 shadow-sm border-0 skills-card"
                 style={{
-                  backgroundColor: "white",
-                  borderLeft: "5px solid #00d4ff",
+                  backgroundColor: "#1a1a1a",
+                  borderLeft: "5px solid #ffffff",
                   transition: "all 0.3s ease",
                 }}
               >
@@ -36,7 +36,7 @@ const Skills = () => {
                     </span>
                     <h5
                       className="card-title fw-bold mb-0"
-                      style={{ color: "#0d1b2a" }}
+                      style={{ color: "#ffffff" }}
                     >
                       {skillGroup.category}
                     </h5>
@@ -46,22 +46,17 @@ const Skills = () => {
                     {skillGroup.skills.map((skill, idx) => (
                       <div key={idx} className="mb-3">
                         <div className="d-flex justify-content-between align-items-center mb-2">
-                          <div className="d-flex align-items-center gap-2">
-                            <span style={{ fontSize: "1.2rem" }}>
-                              {skill.icon}
-                            </span>
-                            <span
-                              className="fw-500"
-                              style={{ color: "#0d1b2a", fontSize: "0.95rem" }}
-                            >
-                              {skill.name}
-                            </span>
-                          </div>
+                          <span
+                            className="fw-500"
+                            style={{ color: "#e0e0e0", fontSize: "0.95rem" }}
+                          >
+                            {skill.name}
+                          </span>
                           <span
                             className="badge"
                             style={{
-                              backgroundColor: "#00d4ff",
-                              color: "#0d1b2a",
+                              backgroundColor: "#ffffff",
+                              color: "#000000",
                             }}
                           >
                             {skill.proficiency}%
@@ -69,14 +64,14 @@ const Skills = () => {
                         </div>
                         <div
                           className="progress"
-                          style={{ height: "8px", backgroundColor: "#e0e0e0" }}
+                          style={{ height: "8px", backgroundColor: "#333333" }}
                         >
                           <div
                             className="progress-bar"
                             role="progressbar"
                             style={{
                               width: `${skill.proficiency}%`,
-                              backgroundColor: "#00d4ff",
+                              backgroundColor: "#ffffff",
                               transition: "width 0.6s ease",
                             }}
                             aria-valuenow={skill.proficiency}

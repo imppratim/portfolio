@@ -4,28 +4,29 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      style={{ backgroundColor: "#0d1b2a" }}
+      style={{ backgroundColor: "#0a0a0a", borderTop: "1px solid #222222" }}
       className="text-white py-5"
     >
       <div className="container-lg">
         <div className="row mb-4">
           <div className="col-md-4 mb-4 mb-md-0">
-            <h5 className="fw-bold mb-3" style={{ color: "#00d4ff" }}>
+            <h5 className="fw-bold mb-3" style={{ color: "#ffffff" }}>
               Partha Pratim Nandi
             </h5>
-            <p className="text-white-50 small">
+            <p className="small" style={{ color: "#888888" }}>
               AI Engineer | Web Developer | Tech Enthusiast
             </p>
           </div>
           <div className="col-md-4 mb-4 mb-md-0">
-            <h5 className="fw-bold mb-3" style={{ color: "#00d4ff" }}>
+            <h5 className="fw-bold mb-3" style={{ color: "#ffffff" }}>
               Quick Links
             </h5>
             <ul className="list-unstyled">
               <li>
                 <a
                   href="#introduction"
-                  className="text-white-50 text-decoration-none small"
+                  className="text-decoration-none small"
+                  style={{ color: "#888888" }}
                 >
                   Introduction
                 </a>
@@ -33,7 +34,8 @@ const Footer = () => {
               <li>
                 <a
                   href="#skills"
-                  className="text-white-50 text-decoration-none small"
+                  className="text-decoration-none small"
+                  style={{ color: "#888888" }}
                 >
                   Skills
                 </a>
@@ -41,7 +43,8 @@ const Footer = () => {
               <li>
                 <a
                   href="#projects"
-                  className="text-white-50 text-decoration-none small"
+                  className="text-decoration-none small"
+                  style={{ color: "#888888" }}
                 >
                   Projects
                 </a>
@@ -49,13 +52,14 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-md-4">
-            <h5 className="fw-bold mb-3" style={{ color: "#00d4ff" }}>
+            <h5 className="fw-bold mb-3" style={{ color: "#ffffff" }}>
               Follow Me
             </h5>
             <div className="d-flex gap-3">
               <a
                 href="https://linkedin.com"
-                className="text-white-50 text-decoration-none"
+                className="text-decoration-none"
+                style={{ color: "#888888" }}
               >
                 <i className="bi bi-linkedin"></i> LinkedIn
               </a>
