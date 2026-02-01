@@ -20,17 +20,18 @@ const Introduction = () => {
             </p>
             <p className="text-white-50 lh-lg mb-4">{personalData.intro}</p>
             <div className="d-grid gap-3 d-sm-flex">
-              <button
-                type="button"
-                className="btn btn-lg fw-bold"
+              <a
+                href="mailto:imppratim@gmail.com"
+                className="btn btn-lg fw-bold text-decoration-none"
                 style={{
                   backgroundColor: "#00d4ff",
                   color: "#0d1b2a",
                   border: "none",
+                  display: "inline-block",
                 }}
               >
                 Get In Touch
-              </button>
+              </a>
               <button
                 type="button"
                 className="btn btn-lg fw-bold"
