@@ -7,10 +7,14 @@ const Introduction = () => {
       className="py-5"
       style={{
         background: "linear-gradient(135deg, #000000 0%, #1a1a1a 100%)",
+        minHeight: "80vh",
+        display: "flex",
+        alignItems: "center",
       }}
     >
       <div className="container-lg">
         <div className="row align-items-center gap-4 gap-lg-0">
+          {/* Text Content */}
           <div className="col-lg-6 text-white">
             <h1 className="display-3 fw-bold mb-3" style={{ color: "#ffffff" }}>
               {personalData.name}
@@ -32,7 +36,7 @@ const Introduction = () => {
                   backgroundColor: "#ffffff",
                   color: "#000000",
                   border: "none",
-                  display: "inline-block",
+                  padding: "12px 30px",
                 }}
               >
                 Get In Touch
@@ -46,48 +50,79 @@ const Introduction = () => {
                   color: "#ffffff",
                   border: "2px solid #ffffff",
                   backgroundColor: "transparent",
-                  display: "inline-block",
+                  padding: "12px 30px",
                 }}
               >
                 View CV
               </a>
             </div>
           </div>
+
+          {/* Image with Glare Effect */}
           <div className="col-lg-6 text-center">
-            <img
-              src={personalData.image}
-              alt={personalData.name}
-              className="img-fluid rounded-circle shadow-lg"
-              style={{
-                maxWidth: "400px",
-                border: "4px solid #ffffff",
-                boxShadow:
-                  "0 0 30px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.3), 0 0 100px rgba(255, 255, 255, 0.1)",
-                animation: "glare 3s ease-in-out infinite",
-              }}
-            />
-            <style>{`
-              @keyframes glare {
-                0% {
-                  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5),
-                              0 0 60px rgba(255, 255, 255, 0.3),
-                              0 0 100px rgba(255, 255, 255, 0.1);
-                }
-                50% {
-                  box-shadow: 0 0 40px rgba(255, 255, 255, 0.7),
-                              0 0 80px rgba(255, 255, 255, 0.5),
-                              0 0 120px rgba(255, 255, 255, 0.2);
-                }
-                100% {
-                  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5),
-                              0 0 60px rgba(255, 255, 255, 0.3),
-                              0 0 100px rgba(255, 255, 255, 0.1);
-                }
-              }
-            `}</style>
+            <div className="glare-container">
+              <img
+                src={personalData.image}
+                alt={personalData.name}
+                className="img-fluid rounded-circle profile-img"
+              />
+            </div>
           </div>
         </div>
       </div>
+
+      <style>{`
+        /* Container to clip the glare within the circle */
+        .glare-container {
+          position: relative;
+          display: inline-block;
+          border-radius: 50%;
+          overflow: hidden;
+          border: 4px solid rgba(255, 255, 255, 0.8);
+          box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+          isolation: isolate; /* Fixes overflow issues in some browsers */
+        }
+
+        .profile-img {
+          max-width: 400px;
+          display: block;
+          transition: transform 0.3s ease;
+        }
+
+        /* The Glare Sweep */
+        .glare-container::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -150%;
+          width: 60%;
+          height: 100%;
+          background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          transform: skewX(-25deg);
+          animation: sweep 5s infinite;
+        }
+
+        @keyframes sweep {
+          0% {
+            left: -150%;
+          }
+          20% {
+            left: 150%;
+          }
+          100% {
+            left: 150%;
+          }
+        }
+
+        .glare-container:hover .profile-img {
+          transform: scale(1.02);
+        }
+      `}</style>
     </section>
   );
 };
