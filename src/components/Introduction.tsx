@@ -38,7 +38,7 @@ const Introduction = () => {
                 Get In Touch
               </a>
               <a
-                href="/Partha-Pratim-Nandi-CV.pdf"
+                href={`${import.meta.env.BASE_URL}Partha-Pratim-Nandi-CV.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-lg fw-bold text-decoration-none"
@@ -58,8 +58,33 @@ const Introduction = () => {
               src={personalData.image}
               alt={personalData.name}
               className="img-fluid rounded-circle shadow-lg"
-              style={{ maxWidth: "400px", border: "4px solid #ffffff" }}
+              style={{
+                maxWidth: "400px",
+                border: "4px solid #ffffff",
+                boxShadow:
+                  "0 0 30px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.3), 0 0 100px rgba(255, 255, 255, 0.1)",
+                animation: "glare 3s ease-in-out infinite",
+              }}
             />
+            <style>{`
+              @keyframes glare {
+                0% {
+                  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5),
+                              0 0 60px rgba(255, 255, 255, 0.3),
+                              0 0 100px rgba(255, 255, 255, 0.1);
+                }
+                50% {
+                  box-shadow: 0 0 40px rgba(255, 255, 255, 0.7),
+                              0 0 80px rgba(255, 255, 255, 0.5),
+                              0 0 120px rgba(255, 255, 255, 0.2);
+                }
+                100% {
+                  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5),
+                              0 0 60px rgba(255, 255, 255, 0.3),
+                              0 0 100px rgba(255, 255, 255, 0.1);
+                }
+              }
+            `}</style>
           </div>
         </div>
       </div>

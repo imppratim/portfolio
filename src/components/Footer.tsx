@@ -33,6 +33,15 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  href="#education"
+                  className="text-decoration-none small"
+                  style={{ color: "#888888" }}
+                >
+                  Education
+                </a>
+              </li>
+              <li>
+                <a
                   href="#skills"
                   className="text-decoration-none small"
                   style={{ color: "#888888" }}

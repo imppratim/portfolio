@@ -45,23 +45,17 @@ const Skills = () => {
                   <div className="skills-list">
                     {skillGroup.skills.map((skill, idx) => (
                       <div key={idx} className="mb-3">
-                        <div className="d-flex justify-content-between align-items-center mb-2">
-                          <span
-                            className="fw-500"
-                            style={{ color: "#e0e0e0", fontSize: "0.95rem" }}
-                          >
-                            {skill.name}
-                          </span>
-                          <span
-                            className="badge"
-                            style={{
-                              backgroundColor: "#ffffff",
-                              color: "#000000",
-                            }}
-                          >
-                            {skill.proficiency}%
-                          </span>
-                        </div>
+                        <span
+                          className="fw-500"
+                          style={{
+                            color: "#e0e0e0",
+                            fontSize: "0.95rem",
+                            display: "block",
+                            marginBottom: "6px",
+                          }}
+                        >
+                          {skill.name}
+                        </span>
                         <div
                           className="progress"
                           style={{ height: "8px", backgroundColor: "#333333" }}
