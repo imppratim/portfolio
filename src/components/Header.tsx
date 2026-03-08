@@ -1,3 +1,5 @@
+import "../styles/components/Header.css";
+
 const Header = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -5,19 +7,9 @@ const Header = () => {
   };
 
   return (
-    <header
-      className="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm"
-      style={{
-        backgroundColor: "#0a0a0a",
-        borderBottom: "1px solid #222222",
-      }}
-    >
+    <header className="navbar navbar-expand-lg navbar-light sticky-top shadow-sm site-header">
       <div className="container-fluid px-4 px-lg-5">
-        <a
-          className="navbar-brand fw-bold fs-4"
-          href="#"
-          style={{ color: "#00d4ff" }}
-        >
+        <a className="navbar-brand fw-bold fs-4 site-brand" href="#">
           PP
         </a>
         <button
@@ -35,7 +27,7 @@ const Header = () => {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <button
-                className="nav-link btn btn-link text-white"
+                className="nav-link btn btn-link"
                 onClick={() => scrollToSection("introduction")}
               >
                 Introduction
@@ -43,7 +35,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <button
-                className="nav-link btn btn-link text-white"
+                className="nav-link btn btn-link"
                 onClick={() => scrollToSection("education")}
               >
                 Education
@@ -51,7 +43,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <button
-                className="nav-link btn btn-link text-white"
+                className="nav-link btn btn-link"
                 onClick={() => scrollToSection("skills")}
               >
                 Skills
@@ -59,7 +51,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <button
-                className="nav-link btn btn-link text-white"
+                className="nav-link btn btn-link"
                 onClick={() => scrollToSection("projects")}
               >
                 Projects
@@ -67,7 +59,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <button
-                className="nav-link btn btn-link text-white"
+                className="nav-link btn btn-link"
                 onClick={() => scrollToSection("contact")}
               >
                 Contact

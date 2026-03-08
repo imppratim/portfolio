@@ -1,0 +1,16 @@
+.site-header {
+  background-color: var(--fourth-color);
+  border-bottom: 1px solid var(--third-color);
+}
+
+.site-brand {
+  color: var(--first-color) !important;
+}
+
+.site-header .navbar-toggler {
+  border-color: var(--second-color);
+}
+
+.site-header .navbar-toggler:focus {
+  box-shadow: none;
+}

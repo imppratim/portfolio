@@ -1,6 +1,7 @@
 import { useState } from "react";
 import myProjects from "../data/myProjects";
 import type { Project } from "../data/myProjects";
+import "../styles/components/Projects.css";
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -11,63 +12,46 @@ const Projects = () => {
     ? myProjects.filter((p) => p.category === selectedCategory)
     : myProjects;
 
-  const getDifficultyColor = (difficulty: string) => {
+  const getDifficultyClass = (difficulty: string) => {
     switch (difficulty) {
       case "Beginner":
-        return "#4CAF50";
+        return "projects-difficulty-beginner";
       case "Intermediate":
-        return "#FFC107";
+        return "projects-difficulty-intermediate";
       case "Advanced":
-        return "#F44336";
+        return "projects-difficulty-advanced";
       default:
-        return "#00d4ff";
+        return "projects-difficulty-beginner";
     }
   };
 
   return (
-    <section
-      id="projects"
-      className="py-5"
-      style={{
-        background: "linear-gradient(135deg, #000000 0%, #1a1a1a 100%)",
-      }}
-    >
+    <section id="projects" className="py-5 projects-section">
       <div className="container-lg">
-        <h2
-          className="display-5 fw-bold text-center mb-2"
-          style={{ color: "#ffffff" }}
-        >
+        <h2 className="display-5 fw-bold text-center mb-2 projects-title">
           Featured Projects
         </h2>
-        <p className="text-center mb-4" style={{ color: "#888888" }}>
+        <p className="text-center mb-4 projects-subtitle">
           Showcasing my work across different domains
         </p>
 
         {/* Category Filter */}
         <div className="d-flex justify-content-center gap-2 mb-5 flex-wrap">
           <button
-            className="btn btn-sm fw-bold"
+            className={`btn btn-sm fw-bold projects-filter-btn ${
+              selectedCategory === null ? "projects-filter-btn-active" : ""
+            }`}
             onClick={() => setSelectedCategory(null)}
-            style={{
-              backgroundColor:
-                selectedCategory === null ? "#ffffff" : "#333333",
-              color: selectedCategory === null ? "#000000" : "#888888",
-              border: "none",
-            }}
           >
             All Projects
           </button>
           {categories.map((cat) => (
             <button
               key={cat}
-              className="btn btn-sm fw-bold"
+              className={`btn btn-sm fw-bold projects-filter-btn ${
+                selectedCategory === cat ? "projects-filter-btn-active" : ""
+              }`}
               onClick={() => setSelectedCategory(cat)}
-              style={{
-                backgroundColor:
-                  selectedCategory === cat ? "#ffffff" : "#333333",
-                color: selectedCategory === cat ? "#000000" : "#888888",
-                border: "none",
-              }}
             >
               {cat}
             </button>
@@ -78,52 +62,27 @@ const Projects = () => {
         <div className="row g-4">
           {filteredProjects.map((project: Project) => (
             <div key={project.id} className="col-md-6 col-lg-6">
-              <div
-                className="card h-100 shadow-sm border-0 overflow-hidden project-card"
-                style={{
-                  transition: "all 0.3s ease",
-                  borderTop: "4px solid #ffffff",
-                  backgroundColor: "#1a1a1a",
-                }}
-              >
+              <div className="card h-100 shadow-sm border-0 overflow-hidden project-card projects-card-shell">
                 <div className="card-body p-4">
                   <div className="d-flex justify-content-between align-items-start mb-3">
                     <div className="d-flex align-items-center gap-2">
-                      <span style={{ fontSize: "2rem" }}>
-                        {project.icon || "📌"}
-                      </span>
-                      <h5
-                        className="card-title fw-bold mb-0"
-                        style={{ color: "#ffffff" }}
-                      >
+                      <span className="projects-icon">{project.icon || "📌"}</span>
+                      <h5 className="card-title fw-bold mb-0 projects-card-title">
                         {project.title}
                       </h5>
                     </div>
                     <span
-                      className="badge fw-bold"
-                      style={{
-                        backgroundColor: getDifficultyColor(project.difficulty),
-                        color: "white",
-                      }}
+                      className={`badge fw-bold projects-difficulty-badge ${getDifficultyClass(project.difficulty)}`}
                     >
                       {project.difficulty}
                     </span>
                   </div>
 
-                  <p
-                    className="card-text small mb-3"
-                    style={{ lineHeight: "1.6", color: "#b0b0b0" }}
-                  >
+                  <p className="card-text small mb-3 projects-description">
                     {project.description}
                   </p>
 
-                  <p
-                    style={{
-                      color: "#888888",
-                      fontSize: "0.85rem",
-                      marginBottom: "1rem",
-                    }}
-                  >
+                  <p className="projects-meta">
                     <small>
                       📅 {project.year || "2024"} • 📂 {project.category}
                     </small>
@@ -132,17 +91,7 @@ const Projects = () => {
                   <div className="mb-3">
                     <div className="d-flex flex-wrap gap-2">
                       {project.technologies.map((tech, idx) => (
-                        <span
-                          key={idx}
-                          className="badge"
-                          style={{
-                            backgroundColor: "#e3f2fd",
-                            color: "#00d4ff",
-                            fontSize: "0.8rem",
-                            fontWeight: "600",
-                            border: "1px solid #00d4ff",
-                          }}
-                        >
+                        <span key={idx} className="badge projects-tech-badge">
                           {tech}
                         </span>
                       ))}
@@ -155,12 +104,7 @@ const Projects = () => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn btn-sm fw-bold flex-grow-1"
-                        style={{
-                          backgroundColor: "#0d1b2a",
-                          color: "#00d4ff",
-                          border: "1px solid #00d4ff",
-                        }}
+                        className="btn btn-sm fw-bold flex-grow-1 projects-action-btn projects-action-btn-github"
                       >
                         🔗 GitHub
                       </a>
@@ -170,12 +114,7 @@ const Projects = () => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn btn-sm fw-bold flex-grow-1"
-                        style={{
-                          backgroundColor: "#00d4ff",
-                          color: "#0d1b2a",
-                          border: "none",
-                        }}
+                        className="btn btn-sm fw-bold flex-grow-1 projects-action-btn projects-action-btn-live"
                       >
                         View Live
                       </a>
@@ -189,7 +128,7 @@ const Projects = () => {
 
         {filteredProjects.length === 0 && (
           <div className="text-center py-5">
-            <p className="text-muted" style={{ fontSize: "1.1rem" }}>
+            <p className="projects-empty-text">
               No projects found in this category.
             </p>
           </div>

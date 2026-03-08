@@ -1,0 +1,19 @@
+.footer-section {
+  background-color: var(--fourth-color);
+  border-top: 1px solid var(--third-color);
+}
+
+.footer-heading {
+  color: var(--first-color);
+}
+
+.footer-subtext,
+.footer-link,
+.footer-social-link,
+.footer-copy {
+  color: var(--second-color);
+}
+
+.footer-divider {
+  border-color: var(--third-color);
+}

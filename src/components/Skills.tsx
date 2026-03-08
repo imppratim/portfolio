@@ -1,43 +1,30 @@
 import mySkills from "../data/meinSkills";
+import "../styles/components/Skills.css";
 
 const Skills = () => {
+  const getSkillProgressClass = (proficiency: number) => {
+    const clamped = Math.max(0, Math.min(100, Math.round(proficiency)));
+    return `skill-progress-${clamped}`;
+  };
+
   return (
-    <section
-      id="skills"
-      className="py-5"
-      style={{ backgroundColor: "#0a0a0a" }}
-    >
+    <section id="skills" className="py-5 skills-section">
       <div className="container-lg">
-        <h2
-          className="display-5 fw-bold text-center mb-2"
-          style={{ color: "#ffffff" }}
-        >
+        <h2 className="display-5 fw-bold text-center mb-2 skills-title">
           Technical Skills
         </h2>
-        <p className="text-center mb-5" style={{ color: "#888888" }}>
+        <p className="text-center mb-5 skills-subtitle">
           Expertise across AI/ML, Web Development, Backend, and DevOps
         </p>
 
         <div className="row g-4">
           {mySkills.map((skillGroup, index) => (
             <div key={index} className="col">
-              <div
-                className="card h-100 shadow-sm border-0 skills-card"
-                style={{
-                  backgroundColor: "#1a1a1a",
-                  borderLeft: "5px solid #ffffff",
-                  transition: "all 0.3s ease",
-                }}
-              >
+              <div className="card h-100 shadow-sm border-0 skills-card skills-panel">
                 <div className="card-body p-4">
                   <div className="d-flex align-items-center mb-4">
-                    <span style={{ fontSize: "2rem", marginRight: "12px" }}>
-                      {skillGroup.icon}
-                    </span>
-                    <h5
-                      className="card-title fw-bold mb-0"
-                      style={{ color: "#ffffff" }}
-                    >
+                    <span className="skills-icon">{skillGroup.icon}</span>
+                    <h5 className="card-title fw-bold mb-0 skills-category-title">
                       {skillGroup.category}
                     </h5>
                   </div>
@@ -45,29 +32,13 @@ const Skills = () => {
                   <div className="skills-list">
                     {skillGroup.skills.map((skill, idx) => (
                       <div key={idx} className="mb-3">
-                        <span
-                          className="fw-500"
-                          style={{
-                            color: "#e0e0e0",
-                            fontSize: "0.95rem",
-                            display: "block",
-                            marginBottom: "6px",
-                          }}
-                        >
+                        <span className="fw-500 skills-skill-name">
                           {skill.name}
                         </span>
-                        <div
-                          className="progress"
-                          style={{ height: "8px", backgroundColor: "#333333" }}
-                        >
+                        <div className="progress skills-progress-track">
                           <div
-                            className="progress-bar"
+                            className={`progress-bar skills-progress-fill ${getSkillProgressClass(skill.proficiency)}`}
                             role="progressbar"
-                            style={{
-                              width: `${skill.proficiency}%`,
-                              backgroundColor: "#ffffff",
-                              transition: "width 0.6s ease",
-                            }}
                             aria-valuenow={skill.proficiency}
                             aria-valuemin={0}
                             aria-valuemax={100}

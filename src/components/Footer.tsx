@@ -1,32 +1,29 @@
+import "../styles/components/Footer.css";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer
-      id="contact"
-      style={{ backgroundColor: "#0a0a0a", borderTop: "1px solid #222222" }}
-      className="text-white py-5"
-    >
+    <footer id="contact" className="py-5 footer-section">
       <div className="container-lg">
         <div className="row mb-4">
           <div className="col-md-4 mb-4 mb-md-0">
-            <h5 className="fw-bold mb-3" style={{ color: "#ffffff" }}>
+            <h5 className="fw-bold mb-3 footer-heading">
               Partha Pratim Nandi
             </h5>
-            <p className="small" style={{ color: "#888888" }}>
+            <p className="small footer-subtext">
               AI Engineer | Web Developer | Tech Enthusiast
             </p>
           </div>
           <div className="col-md-4 mb-4 mb-md-0">
-            <h5 className="fw-bold mb-3" style={{ color: "#ffffff" }}>
+            <h5 className="fw-bold mb-3 footer-heading">
               Quick Links
             </h5>
             <ul className="list-unstyled">
               <li>
                 <a
                   href="#introduction"
-                  className="text-decoration-none small"
-                  style={{ color: "#888888" }}
+                  className="text-decoration-none small footer-link"
                 >
                   Introduction
                 </a>
@@ -34,8 +31,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#education"
-                  className="text-decoration-none small"
-                  style={{ color: "#888888" }}
+                  className="text-decoration-none small footer-link"
                 >
                   Education
                 </a>
@@ -43,8 +39,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#skills"
-                  className="text-decoration-none small"
-                  style={{ color: "#888888" }}
+                  className="text-decoration-none small footer-link"
                 >
                   Skills
                 </a>
@@ -52,8 +47,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#projects"
-                  className="text-decoration-none small"
-                  style={{ color: "#888888" }}
+                  className="text-decoration-none small footer-link"
                 >
                   Projects
                 </a>
@@ -61,34 +55,33 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-md-4">
-            <h5 className="fw-bold mb-3" style={{ color: "#ffffff" }}>
+            <h5 className="fw-bold mb-3 footer-heading">
               Follow Me
             </h5>
             <div className="d-flex gap-3">
               <a
-                href="https://linkedin.com"
-                className="text-decoration-none"
-                style={{ color: "#888888" }}
+                href="https://www.linkedin.com/in/imppratim/"
+                className="text-decoration-none footer-social-link"
               >
                 <i className="bi bi-linkedin"></i> LinkedIn
               </a>
               <a
-                href="https://github.com"
-                className="text-white-50 text-decoration-none"
+                href="https://github.com/imppratim"
+                className="text-decoration-none footer-social-link"
               >
                 <i className="bi bi-github"></i> GitHub
               </a>
               <a
-                href="mailto:partha@example.com"
-                className="text-white-50 text-decoration-none"
+                href="mailto:imppratim@gmail.com"
+                className="text-decoration-none footer-social-link"
               >
                 <i className="bi bi-envelope"></i> Email
               </a>
             </div>
           </div>
         </div>
-        <hr className="border-secondary" />
-        <div className="text-center text-white-50 small">
+        <hr className="footer-divider" />
+        <div className="text-center small footer-copy">
           <p className="mb-0">
             © {currentYear} Partha Pratim Nandi. All rights reserved.
           </p>

@@ -1,0 +1,95 @@
+.projects-section {
+  background: linear-gradient(
+    135deg,
+    var(--fourth-color) 0%,
+    var(--third-color) 100%
+  );
+}
+
+.projects-title {
+  color: var(--first-color);
+}
+
+.projects-subtitle {
+  color: var(--second-color);
+}
+
+.projects-filter-btn {
+  background-color: var(--third-color);
+  color: var(--second-color);
+  border: none;
+}
+
+.projects-filter-btn-active {
+  background-color: var(--first-color);
+  color: var(--fourth-color);
+}
+
+.projects-card-shell {
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--first-color);
+  background-color: var(--third-color);
+}
+
+.projects-icon {
+  font-size: 2rem;
+}
+
+.projects-card-title {
+  color: var(--first-color);
+}
+
+.projects-difficulty-badge {
+  font-size: 0.8rem;
+}
+
+.projects-difficulty-beginner {
+  background-color: var(--second-color);
+  color: var(--fourth-color);
+}
+
+.projects-difficulty-intermediate {
+  background-color: var(--third-color);
+  color: var(--first-color);
+}
+
+.projects-difficulty-advanced {
+  background-color: var(--first-color);
+  color: var(--fourth-color);
+}
+
+.projects-description {
+  line-height: 1.6;
+  color: var(--second-color);
+}
+
+.projects-meta {
+  color: var(--second-color);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.projects-tech-badge {
+  background-color: var(--first-color);
+  color: var(--fourth-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid var(--second-color);
+}
+
+.projects-action-btn-github {
+  background-color: var(--fourth-color);
+  color: var(--first-color);
+  border: 1px solid var(--second-color);
+}
+
+.projects-action-btn-live {
+  background-color: var(--first-color);
+  color: var(--fourth-color);
+  border: none;
+}
+
+.projects-empty-text {
+  font-size: 1.1rem;
+  color: var(--second-color);
+}
