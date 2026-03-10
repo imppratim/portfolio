@@ -50,6 +50,11 @@ const education: EducationItem[] = [
     location: "Ahmedabad, India",
     scholarship: "Recipient of a fully funded Government Scholarship (ICCR)",
     finalProject: "Real-Time Bus Fare Comparison Android app",
+    highlights: [
+      "Built an Android app that aggregated real-time bus fare, route, and ETA data from multiple operators in one interface.",
+      "Implemented comparison logic to rank options by lowest fare, fastest route, and best overall value.",
+      "Integrated APIs with caching and error handling to keep fare comparisons fast, reliable, and user-friendly.",
+    ],
     courses: [
       "Software Engineering",
       "Artificial Intelligence",

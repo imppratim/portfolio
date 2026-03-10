@@ -67,6 +67,14 @@ const Education = () => {
                     </div>
                   )}
 
+                  {edu.finalProject && (
+                    <div className="education-final-project">
+                      <p className="education-detail-text">
+                        <strong>Final Project:</strong> {edu.finalProject}
+                      </p>
+                    </div>
+                  )}
+
                   {edu.highlights && edu.highlights.length > 0 && (
                     <div className="education-detail-block">
                       <p className="education-detail-title">
@@ -94,14 +102,6 @@ const Education = () => {
                           </span>
                         ))}
                       </div>
-                    </div>
-                  )}
-
-                  {edu.finalProject && (
-                    <div className="education-final-project">
-                      <p className="education-detail-text">
-                        <strong>Final Project:</strong> {edu.finalProject}
-                      </p>
                     </div>
                   )}
                 </div>

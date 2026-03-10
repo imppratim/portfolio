@@ -100,10 +100,11 @@
 
 .education-course-tag {
   background-color: var(--third-color);
-  color: var(--first-color);
+  color: var(--fourth-color);
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   font-size: 0.75rem;
+  font-weight: 600;
 }
 
 .education-final-project {

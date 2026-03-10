@@ -10,6 +10,11 @@ const Header = () => {
     <header className="navbar navbar-expand-lg navbar-light sticky-top shadow-sm site-header">
       <div className="container-fluid px-4 px-lg-5">
         <a className="navbar-brand fw-bold fs-4 site-brand" href="#">
+          <img
+            src={`${import.meta.env.BASE_URL}portfolio-icon.png`}
+            alt="Portfolio logo"
+            className="site-brand-logo"
+          />
           PP
         </a>
         <button

@@ -73,10 +73,52 @@
   border: 1px solid var(--second-color);
 }
 
-.projects-action-btn-github {
-  background-color: var(--third-color);
-  color: var(--first-color);
-  border: 1px solid var(--second-color);
+.projects-action-btn.projects-action-btn-github {
+  background-color: var(--third-color) !important;
+  color: var(--fourth-color) !important;
+  border: 1px solid var(--second-color) !important;
+  position: relative;
+  overflow: visible;
+}
+
+.projects-action-btn.projects-action-btn-github::after,
+.projects-action-btn.projects-action-btn-github::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #ffffff, #00ffff);
+  transform: scaleX(0);
+  transition: transform 0.4s ease-out;
+  pointer-events: none;
+}
+
+.projects-action-btn.projects-action-btn-github::after {
+  bottom: -5px;
+  transform-origin: right;
+}
+
+.projects-action-btn.projects-action-btn-github::before {
+  top: -5px;
+  transform-origin: left;
+}
+
+.projects-action-btn.projects-action-btn-github:hover,
+.projects-action-btn.projects-action-btn-github:focus-visible {
+  background-color: var(--third-color) !important;
+  color: #ffffff !important;
+  border-color: var(--second-color) !important;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.65);
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.projects-action-btn.projects-action-btn-github:hover::after,
+.projects-action-btn.projects-action-btn-github:hover::before,
+.projects-action-btn.projects-action-btn-github:focus-visible::after,
+.projects-action-btn.projects-action-btn-github:focus-visible::before {
+  transform: scaleX(1);
 }
 
 .projects-action-btn-live {

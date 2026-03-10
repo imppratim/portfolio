@@ -4,7 +4,17 @@
 }
 
 .site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   color: var(--fourth-color) !important;
+}
+
+.site-brand-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .site-header .navbar-toggler {
