@@ -1,9 +1,5 @@
 .projects-section {
-  background: linear-gradient(
-    135deg,
-    var(--fourth-color) 0%,
-    var(--third-color) 100%
-  );
+  background: var(--section-gradient);
 }
 
 .projects-title {
@@ -21,7 +17,7 @@
 }
 
 .projects-filter-btn-active {
-  background-color: var(--first-color);
+  background-color: var(--third-color);
   color: var(--fourth-color);
 }
 
@@ -44,7 +40,7 @@
 }
 
 .projects-difficulty-beginner {
-  background-color: var(--second-color);
+  background-color: var(--third-color);
   color: var(--fourth-color);
 }
 
@@ -54,7 +50,7 @@
 }
 
 .projects-difficulty-advanced {
-  background-color: var(--first-color);
+  background-color: var(--third-color);
   color: var(--fourth-color);
 }
 
@@ -70,7 +66,7 @@
 }
 
 .projects-tech-badge {
-  background-color: var(--first-color);
+  background-color: var(--third-color);
   color: var(--fourth-color);
   font-size: 0.8rem;
   font-weight: 600;
@@ -78,13 +74,13 @@
 }
 
 .projects-action-btn-github {
-  background-color: var(--fourth-color);
+  background-color: var(--third-color);
   color: var(--first-color);
   border: 1px solid var(--second-color);
 }
 
 .projects-action-btn-live {
-  background-color: var(--first-color);
+  background-color: var(--third-color);
   color: var(--fourth-color);
   border: none;
 }

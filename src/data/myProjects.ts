@@ -4,7 +4,7 @@ export interface Project {
   description: string;
   longDescription: string;
   technologies: string[];
-  category: "AI/ML" | "Web" | "Frontend" | "Data Engineering" | "Data Analysis";
+  category: "AI/ML" | "Web" | "Data Engineering" | "Data Analysis";
   difficulty: "Beginner" | "Intermediate" | "Advanced";
   link?: string;
   github?: string;
@@ -31,7 +31,7 @@ const myProjects: Project[] = [
       "Webpack",
       "Vite",
     ],
-    category: "Frontend",
+    category: "Web",
     difficulty: "Advanced",
     github: "https://github.com/Fraunhofer-IIS/mpeg-h-browser-ui",
     icon: "🎵",
@@ -54,7 +54,7 @@ const myProjects: Project[] = [
       "Matplotlib",
       "scikit-learn",
     ],
-    category: "AI/ML",
+    category: "Data Analysis",
     difficulty: "Advanced",
     github: "#",
     year: 2025,

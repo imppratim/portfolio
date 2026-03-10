@@ -11,7 +11,7 @@ const Skills = () => {
     <section id="skills" className="py-5 skills-section">
       <div className="container-lg">
         <h2 className="display-5 fw-bold text-center mb-2 skills-title">
-          Technical Skills
+          Skills
         </h2>
         <p className="text-center mb-5 skills-subtitle">
           Expertise across AI/ML, Web Development, Backend, and DevOps

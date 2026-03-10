@@ -22,11 +22,11 @@ const education: EducationItem[] = [
     degree: "Master of Science",
     field: "Data Science",
     year: "October 2021 - January 2026",
-    grade: "In Progress",
+    grade: "2.3",
     logo: fauLogo,
     location: "Erlangen, Germany",
     thesis:
-      "Exploring zero-shot computer vision models for the annotation and detection in the context of weed detection (collaborative thesis with the University of Hohenheim - submitted)",
+      "Exploring zero-shot computer vision models for the annotation and detection in the context of weed detection (collaborative thesis with the University of Hohenheim)",
     highlights: [
       "Evaluated deep learning zero-shot vision models (CLIP, Grounding DINO, and Grounded-SAM 2) for classification, object detection, and segmentation in agricultural imagery",
       "Performed statistical evaluation and comparative analysis to analyze model's performance and deployment feasibility",

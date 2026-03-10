@@ -1,9 +1,5 @@
 .introduction-section {
-  background: linear-gradient(
-    135deg,
-    var(--fourth-color) 0%,
-    var(--third-color) 100%
-  );
+  background: var(--section-gradient);
   min-height: 80vh;
   display: flex;
   align-items: center;
@@ -23,7 +19,7 @@
 }
 
 .intro-btn-primary {
-  background-color: var(--first-color);
+  background-color: var(--third-color);
   color: var(--fourth-color);
   border: none;
 }
@@ -45,7 +41,9 @@
 }
 
 .profile-img {
-  max-width: 400px;
+  width: clamp(180px, 40vw, 430px);
+  max-width: 100%;
+  height: auto;
   display: block;
   transition: transform 0.3s ease;
 }

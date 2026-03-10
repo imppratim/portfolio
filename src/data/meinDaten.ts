@@ -2,9 +2,9 @@ import img from "../images/Partha.png";
 
 const myPeronalData = {
   name: "Partha Pratim Nandi",
-  title: "Artificial Intelligence Engineer",
+  title: "Data Scientist",
   image: img,
   intro:
-    "I am an Artificial Intelligence Engineer based in Erlangen, Germany, specializing in machine learning and web development. I have a strong passion for exploring computer vision models and creating interactive, accessible web interfaces that deliver exceptional user experiences. Beyond work, I enjoy hiking, watching football, cricket, and occasionally playing video games. Recently, I have embraced playing the piano as a new hobby. In the summer, I actively play cricket a few times a month. Although fishing remains one of my favorite pastimes, after moving to Germany I can dedicate very less time to it.",
+    "I am a Data Scientist based in Erlangen, Germany, specializing in machine learning and web development. I have a strong passion for exploring computer vision models and creating interactive, accessible web interfaces to enhance user experiences. Beyond work, I enjoy hiking, watching football, cricket, and occasionally playing video games. Recently, I have embraced playing the piano as a new hobby. I am always eager to learn and grow in my field, and I look forward to connecting with like-minded professionals and enthusiasts.",
 };
 export default myPeronalData;

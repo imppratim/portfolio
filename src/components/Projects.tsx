@@ -6,10 +6,17 @@ import "../styles/components/Projects.css";
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  const categories = ["AI/ML", "Web", "Backend", "Data"] as const;
+  const categories = ["AI/ML", "Web", "Data"] as const;
 
   const filteredProjects = selectedCategory
-    ? myProjects.filter((p) => p.category === selectedCategory)
+    ? myProjects.filter((p) => {
+        if (selectedCategory === "Data") {
+          return (
+            p.category === "Data Engineering" || p.category === "Data Analysis"
+          );
+        }
+        return p.category === selectedCategory;
+      })
     : myProjects;
 
   const getDifficultyClass = (difficulty: string) => {

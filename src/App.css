@@ -7,8 +7,13 @@
 :root {
   --first-color: #222831;
   --second-color: #393e46;
-  --third-color: #f96d00;
+  --third-color: #144c11;
   --fourth-color: #f2f2f2;
+  --section-gradient: linear-gradient(
+    135deg,
+    var(--fourth-color) 0%,
+    var(--third-color) 100%
+  );
 }
 
 .first-color {
@@ -34,6 +39,7 @@ html {
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--fourth-color);
+  background-image: var(--section-gradient);
   color: var(--first-color);
 }
 

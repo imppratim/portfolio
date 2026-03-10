@@ -1,5 +1,5 @@
 .education-section {
-  background-color: var(--fourth-color);
+  background: var(--section-gradient);
 }
 
 .education-title {
@@ -51,7 +51,7 @@
 }
 
 .education-grade {
-  background-color: var(--first-color);
+  background-color: var(--third-color);
   color: var(--fourth-color);
   font-weight: 600;
   font-size: 0.85rem;
@@ -99,7 +99,7 @@
 }
 
 .education-course-tag {
-  background-color: var(--fourth-color);
+  background-color: var(--third-color);
   color: var(--first-color);
   padding: 0.25rem 0.5rem;
   border-radius: 4px;

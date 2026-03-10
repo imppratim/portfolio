@@ -27,7 +27,7 @@ const Header = () => {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <button
-                className="nav-link btn btn-link"
+                className="nav-link btn btn-link header-nav-link"
                 onClick={() => scrollToSection("introduction")}
               >
                 Introduction
@@ -35,7 +35,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <button
-                className="nav-link btn btn-link"
+                className="nav-link btn btn-link header-nav-link"
                 onClick={() => scrollToSection("education")}
               >
                 Education
@@ -43,7 +43,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <button
-                className="nav-link btn btn-link"
+                className="nav-link btn btn-link header-nav-link"
                 onClick={() => scrollToSection("skills")}
               >
                 Skills
@@ -51,7 +51,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <button
-                className="nav-link btn btn-link"
+                className="nav-link btn btn-link header-nav-link"
                 onClick={() => scrollToSection("projects")}
               >
                 Projects
@@ -59,7 +59,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <button
-                className="nav-link btn btn-link"
+                className="nav-link btn btn-link header-nav-link"
                 onClick={() => scrollToSection("contact")}
               >
                 Contact
